@@ -414,18 +414,19 @@
             </li>
           </ul>
         </div>
-        <div class="email-box">
-          <p class="bottom-title">Подпишитесь на рассылку</p>
-          <form class="email-box-form">
-            <input class="email-form" type="email" placeholder="E-mail" />
-            <button class="page-button" type="submit">
-              Подписаться
-              <svg class="send-icon">
-                <use href="./image/icons.svg#send-icon"></use>
-              </svg>
-            </button>
-          </form>
-        </div>
+
+        <form class="email-box">
+          <label class="email-box-label">
+            <p class="bottom-title">Подпишитесь на рассылку</p>
+            <input class="email-form" type="email" name="user-mail" placeholder="E-mail"
+          /></label>
+          <button class="page-button" type="submit">
+            Подписаться
+            <svg class="send-icon">
+              <use href="./image/icons.svg#send-icon"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
