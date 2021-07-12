@@ -222,7 +222,6 @@ img {
   fill: var(--page-color-first);
 }
 .bottom-title {
-  display: block;
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -235,10 +234,6 @@ img {
   align-items: flex-end;
   margin-left: auto;
 }
-/* .email-box-label {
-  display: flex;
-  flex-wrap: wrap; */
-
 .email-form {
   width: 358px;
   height: 50px;
@@ -272,9 +267,8 @@ img {
   margin-left: 12px;
   padding: 10px 28px 10px 29px;
 }
-
 /*====== END Footer ======*/
-/*== Hero ==*/
+/*======== Hero =========*/
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -328,8 +322,8 @@ img {
 .page-button:focus {
   background-color: rgb(24, 140, 232);
 }
-
-/*== Main ==*/
+/* ===== END Hero ===== */
+/*====== Main ======*/
 .title {
   font-weight: 700;
   font-size: 36px;
@@ -339,7 +333,7 @@ img {
   color: rgb(33, 33, 33);
 }
 
-/*== Section benefits ==*/
+/*===== Section benefits =====*/
 .benefits-list {
   display: flex;
   flex-wrap: wrap;
@@ -371,7 +365,6 @@ img {
   background-color: rgb(245, 244, 250);
   border-radius: 4px;
 }
-
 .benefits-item .title {
   margin-bottom: 10px;
 
@@ -380,7 +373,7 @@ img {
   text-transform: uppercase;
   text-align: left;
 }
-
+/*===== END Section benefits =====*/
 /*==Section Workshop==*/
 .section.workshop {
   padding-top: 0;
@@ -417,7 +410,9 @@ img {
   color: var(--page-color-first);
   background-color: rgba(47, 48, 58, 0.8);
 }
-/*== Section Team ==*/
+/*==== END Section Workshop =====*/
+/*===== Section Team ======*/
+
 .team {
   background-color: rgb(245, 244, 250);
 }
