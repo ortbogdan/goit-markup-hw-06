@@ -316,6 +316,7 @@ img {
   border-radius: 4px;
   padding: 10px 0 10px 0;
   width: 200px;
+  margin: 0 auto;
 
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -716,8 +717,13 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   background: transparent;
-
+  fill: rgb(0, 0, 0);
   cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-bt:hover,
+.modal-close-bt:focus {
+  fill: var(--page-color-second);
 }
 .modal > .title {
   margin-bottom: 12px;
@@ -734,8 +740,18 @@ img {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 42px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.modal-cell:hover,
+.modal-cell:focus {
+  outline: none;
+  border-color: var(--page-color-second);
+}
+.modal-cell:hover + .modal-form-icon,
+.modal-cell:focus + .modal-form-icon {
+  fill: var(--page-color-second);
+}
 .modal-form-box {
   position: relative;
 
@@ -751,14 +767,26 @@ img {
   left: 11px;
   width: 18px;
   height: 18px;
+
+  fill: rgb(33, 33, 33);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-area {
   width: 100%;
-  height: 40px;
+  height: 120px;
   padding: 12px 16px 12px 16px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  resize: none;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-area::placeholder {
   color: rgba(117, 117, 117, 0.5);
+}
+.modal-area:hover,
+.modal-area:focus {
+  outline: none;
+  border-color: var(--page-color-second);
 }

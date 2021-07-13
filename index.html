@@ -569,7 +569,7 @@
             </svg>
           </div>
           <div class="modal-form-box">
-            <label class="modal-form-name" for="users_email">Почта</label>
+            <label class="modal-form-name" for="user_email">Почта</label>
             <input class="modal-cell" id="user_email" type="email" name="email" required />
             <svg class="modal-form-icon">
               <use href="./image/icons.svg#email"></use>
@@ -584,6 +584,17 @@
               placeholder="Введите текст"
             ></textarea>
           </div>
+          <label for="modal_checkbox"
+            >Соглашаюсь с рассылкой и принимаю
+            <a href="" target="_blank" rel="noopener noreferrer">Условия договора</a>
+          </label>
+          <input
+            class="modal-checkbox"
+            id="modal_checkbox"
+            type="checkbox"
+            name="user-contract"
+            value="agree"
+          />
           <button class="page-button" type="submit">Отправить</button>
         </form>
       </div>
