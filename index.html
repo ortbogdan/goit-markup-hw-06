@@ -552,7 +552,7 @@
             <input
               class="modal-cell"
               id="user_name"
-              name="user-name"
+              name="clients-name"
               type="text"
               required
               minlength="2"
@@ -563,14 +563,14 @@
           </div>
           <div class="modal-form-box">
             <label class="modal-form-name" for="user_tel"> Телефон</label>
-            <input class="modal-cell" id="user_tel" name="tel" type="tel" required />
+            <input class="modal-cell" id="user_tel" name="clients-tel" type="tel" required />
             <svg class="modal-form-icon">
               <use href="./image/icons.svg#phone"></use>
             </svg>
           </div>
           <div class="modal-form-box">
             <label class="modal-form-name" for="user_email">Почта</label>
-            <input class="modal-cell" id="user_email" type="email" name="email" required />
+            <input class="modal-cell" id="user_email" type="clients-email" name="email" required />
             <svg class="modal-form-icon">
               <use href="./image/icons.svg#email"></use>
             </svg>
@@ -579,22 +579,34 @@
             <label class="modal-form-name" for="user_comment">Комментарий</label>
             <textarea
               class="modal-area"
-              name="user-comment"
+              name="clients-comment"
               id="user_comment"
               placeholder="Введите текст"
             ></textarea>
           </div>
-          <label for="modal_checkbox"
-            >Соглашаюсь с рассылкой и принимаю
-            <a href="" target="_blank" rel="noopener noreferrer">Условия договора</a>
-          </label>
-          <input
-            class="modal-checkbox"
-            id="modal_checkbox"
-            type="checkbox"
-            name="user-contract"
-            value="agree"
-          />
+          <div class="modal-form-box">
+            <label class="modal-form-checkbox">
+              <span class="checkbox-clicks">
+                <input
+                  class="modal-checkbox"
+                  type="checkbox"
+                  name="clients-contract"
+                  value="agree"
+                />
+
+                <svg class="click-on">
+                  <use href="./image/icons.svg#click-on"></use>
+                </svg>
+                <svg class="click-off">
+                  <use href="./image/icons.svg#click-off"></use>
+                </svg>
+              </span>
+              Соглашаюсь с рассылкой и принимаю&nbsp;
+              <a class="link-contract" href="" target="_blank" rel="noopener noreferrer"
+                >Условия договора</a
+              >
+            </label>
+          </div>
           <button class="page-button" type="submit">Отправить</button>
         </form>
       </div>
