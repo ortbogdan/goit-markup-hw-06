@@ -524,7 +524,7 @@
             </li>
           </ul>
         </div>
-        <form class="email-box">
+        <form class="email-box" method="post">
           <label class="email-box-name">
             <p class="bottom-title">Подпишитесь на рассылку</p>
             <input class="email-cell" type="email" name="user-mail" placeholder="E-mail" required
@@ -546,7 +546,7 @@
           </svg>
         </button>
         <p class="title">Оставьте свои данные, мы вам перезвоним</p>
-        <form class="modal-form">
+        <form class="modal-form" method="post">
           <div class="modal-form-box">
             <label class="modal-form-name" for="user_name"> Имя</label>
             <input
@@ -563,7 +563,16 @@
           </div>
           <div class="modal-form-box">
             <label class="modal-form-name" for="user_tel"> Телефон</label>
-            <input class="modal-cell" id="user_tel" name="clients-tel" type="tel" required />
+            <input
+              class="modal-cell"
+              id="user_tel"
+              name="clients-tel"
+              type="tel"
+              min="12"
+              pattern="[0-9]{10}"
+              title="097*******"
+              required
+            />
             <svg class="modal-form-icon">
               <use href="./image/icons.svg#phone"></use>
             </svg>
@@ -585,10 +594,11 @@
             ></textarea>
           </div>
           <div class="modal-form-box">
-            <label class="modal-form-checkbox">
+            <label class="modal-form-checkbox" for="user_contract">
               <span class="checkbox-clicks">
                 <input
                   class="modal-checkbox"
+                  id="user_contract"
                   type="checkbox"
                   name="clients-contract"
                   value="agree"
