@@ -524,18 +524,18 @@
             </li>
           </ul>
         </div>
-        <form class="email-box" method="post">
-          <label class="email-box-name">
-            <p class="bottom-title">Подпишитесь на рассылку</p>
-            <input class="email-cell" type="email" name="user-mail" placeholder="E-mail" required
-          /></label>
-          <button class="page-button" type="submit">
-            Подписаться
-            <svg class="send-icon">
-              <use href="./image/icons.svg#send-icon"></use>
-            </svg>
-          </button>
-        </form>
+        <div class="email-box">
+          <p class="bottom-title">Подпишитесь на рассылку</p>
+          <form class="email-box-form" action="#" method="post">
+            <input class="email-cell" type="email" name="user-mail" placeholder="E-mail" required />
+            <button class="page-button" type="submit">
+              Подписаться
+              <svg class="send-icon">
+                <use href="./image/icons.svg#send-icon"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -545,44 +545,59 @@
             <use href="./image/icons.svg#icon-Vector"></use>
           </svg>
         </button>
-        <p class="title">Оставьте свои данные, мы вам перезвоним</p>
-        <form class="modal-form" method="post">
+
+        <form class="modal-form" action="#" method="post">
+          <p class="title">Оставьте свои данные, мы вам перезвоним</p>
           <div class="modal-form-box">
-            <label class="modal-form-name" for="user_name"> Имя</label>
-            <input
-              class="modal-cell"
-              id="user_name"
-              name="clients-name"
-              type="text"
-              required
-              minlength="2"
-            />
-            <svg class="modal-form-icon">
-              <use href="./image/icons.svg#person"></use>
-            </svg>
+            <label class="modal-form-name" for="user_name">Имя</label>
+            <span class="modal-cells-box">
+              <input
+                class="modal-cell"
+                id="user_name"
+                name="clients-name"
+                type="text"
+                required
+                minlength="2"
+                pattern="[a-zA-Zа-яёА-ЯЁ]+"
+                title="Имя должно содержать символы кирилицы или латиницы"
+              />
+              <svg class="modal-form-icon">
+                <use href="./image/icons.svg#person"></use>
+              </svg>
+            </span>
           </div>
           <div class="modal-form-box">
             <label class="modal-form-name" for="user_tel"> Телефон</label>
-            <input
-              class="modal-cell"
-              id="user_tel"
-              name="clients-tel"
-              type="tel"
-              min="12"
-              pattern="[0-9]{10}"
-              title="097*******"
-              required
-            />
-            <svg class="modal-form-icon">
-              <use href="./image/icons.svg#phone"></use>
-            </svg>
+            <span class="modal-cells-box">
+              <input
+                class="modal-cell"
+                id="user_tel"
+                name="clients-tel"
+                type="tel"
+                min="12"
+                pattern="[0-9]{10}"
+                title="097*******"
+                required
+              />
+              <svg class="modal-form-icon">
+                <use href="./image/icons.svg#phone"></use>
+              </svg>
+            </span>
           </div>
           <div class="modal-form-box">
             <label class="modal-form-name" for="user_email">Почта</label>
-            <input class="modal-cell" id="user_email" type="clients-email" name="email" required />
-            <svg class="modal-form-icon">
-              <use href="./image/icons.svg#email"></use>
-            </svg>
+            <span class="modal-cells-box">
+              <input
+                class="modal-cell"
+                id="user_email"
+                type="clients-email"
+                name="email"
+                required
+              />
+              <svg class="modal-form-icon">
+                <use href="./image/icons.svg#email"></use>
+              </svg>
+            </span>
           </div>
           <div class="modal-form-box">
             <label class="modal-form-name" for="user_comment">Комментарий</label>
@@ -602,6 +617,7 @@
                   type="checkbox"
                   name="clients-contract"
                   value="agree"
+                  checked
                 />
 
                 <svg class="click-on">
@@ -612,7 +628,7 @@
                 </svg>
               </span>
               Соглашаюсь с рассылкой и принимаю&nbsp;
-              <a class="link-contract" href="" target="_blank" rel="noopener noreferrer"
+              <a class="link-contract" href="#" target="_blank" rel="noopener noreferrer"
                 >Условия договора</a
               >
             </label>

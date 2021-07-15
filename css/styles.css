@@ -36,6 +36,7 @@ img {
   width: 100%;
   height: auto;
 }
+/* ===== General Classes ===== */
 .container {
   width: 1200px;
   margin-left: auto;
@@ -47,6 +48,51 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.page-button {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 0 10px 0;
+  width: 200px;
+  margin: 0 auto;
+
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  color: var(--page-color-first);
+  background-color: var(--page-color-second);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-button:hover,
+.page-button:focus {
+  background-color: rgb(24, 140, 232);
+}
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  color: rgb(33, 33, 33);
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+/* ===== END General Classes ===== */
 
 /*======= Header =======*/
 .section.top {
@@ -59,7 +105,6 @@ img {
   display: flex;
   align-items: center;
 }
-
 /*== Logo ==*/
 .logo {
   width: 145px;
@@ -77,7 +122,6 @@ img {
 .logo-web {
   color: var(--page-color-second);
 }
-
 /*== Navigation ==*/
 .menu {
   margin-left: 93px;
@@ -125,6 +169,7 @@ img {
   border-radius: 2px;
   background-color: var(--page-color-second);
 }
+/* ===== END Navigation ===== */
 /*== Contacts ==*/
 .contacts-list {
   display: flex;
@@ -165,8 +210,10 @@ img {
 .contacts-link .contacts-icon {
   margin-right: 10px;
 }
-/*======= END Header =======*/
-/*====== Footer ======*/
+/* ===== END Contacts ===== */
+/* ======= END Header ======= */
+
+/*======== Footer =========*/
 .bottom {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -214,7 +261,6 @@ img {
 .post-office:focus {
   color: var(--page-color-second);
 }
-
 .bottom-box {
   margin-left: 70px;
 }
@@ -230,9 +276,10 @@ img {
   color: var(--page-color-first);
 }
 .email-box {
-  display: flex;
-  align-items: flex-end;
   margin-left: auto;
+}
+.email-box-form {
+  display: flex;
 }
 .email-cell {
   width: 358px;
@@ -267,14 +314,13 @@ img {
   color: var(--page-color-first);
   outline: none;
 }
-
 .send-icon {
   width: 24px;
   height: 24px;
 
   margin-left: 10px;
 }
-.email-box > .page-button {
+.email-box-form > .page-button {
   height: 50px;
   display: flex;
   align-items: center;
@@ -282,6 +328,8 @@ img {
   margin-left: 12px;
 }
 /*====== END Footer ======*/
+
+/*=========== Main ============*/
 /*======== Hero =========*/
 .hero {
   padding-top: 200px;
@@ -311,44 +359,7 @@ img {
 
   color: var(--page-color-first);
 }
-.page-button {
-  border: none;
-  border-radius: 4px;
-  padding: 10px 0 10px 0;
-  width: 200px;
-  margin: 0 auto;
-
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  text-align: center;
-  letter-spacing: 0.06em;
-
-  cursor: pointer;
-
-  color: var(--page-color-first);
-  background-color: var(--page-color-second);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.page-button:hover,
-.page-button:focus {
-  background-color: rgb(24, 140, 232);
-}
 /* ===== END Hero ===== */
-/*====== Main ======*/
-.title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-
-  color: rgb(33, 33, 33);
-}
-
 /*===== Section benefits =====*/
 .benefits-list {
   display: flex;
@@ -362,13 +373,6 @@ img {
   flex-basis: calc(100% / 4 - var(--page-gap));
   margin-top: var(--page-gap);
   margin-left: var(--page-gap);
-}
-.title.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
 }
 .benefits-item-icon {
   display: flex;
@@ -501,7 +505,7 @@ img {
   fill: var(--page-color-first);
   background-color: var(--page-color-second);
 }
-
+/*===== END Section Team ======*/
 /* === Section Clients === */
 .clients .title {
   margin-bottom: 50px;
@@ -532,9 +536,11 @@ img {
 .clients-list .clients-item:not(:first-child) {
   margin-left: var(--page-gap);
 }
+/* === END Section Clients === */
+/* ====== END Main ====== */
 
 /*=== Portfolio ===*/
-/*== Search button ==*/
+/*== Search buttons ==*/
 .search-list {
   display: flex;
   justify-content: center;
@@ -577,6 +583,7 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+/*===== END Search buttons =====*/
 /*=======Portfolio list=======*/
 .portfolio-list {
   margin-top: calc(-1 * var(--page-gap));
@@ -725,16 +732,21 @@ img {
 .modal-close-bt:focus {
   fill: var(--page-color-second);
 }
-.modal > .title {
+/* ====== Modal Form ======= */
+.modal-form > .title {
   margin-bottom: 12px;
 
   font-size: 20px;
   line-height: 1.15;
 }
-/* ====== Modal Form ======= */
+
 .modal-form {
   display: flex;
   flex-direction: column;
+}
+.modal-cells-box {
+  display: block;
+  position: relative;
 }
 .modal-cell {
   width: 100%;
@@ -753,28 +765,29 @@ img {
 .modal-cell:focus + .modal-form-icon {
   fill: var(--page-color-second);
 }
-/* .modal-form-name:hover ~ .modal-form-icon {
-  fill: var(--page-color-second);
-} */
 
 .modal-form-box:not(:last-child) {
-  position: relative;
   margin-bottom: 10px;
 }
-.modal-form-box:nth-child(5) {
+.modal-form-box:nth-child(6) {
   margin-bottom: 30px;
 }
-.modal-form-box:nth-child(4) {
+.modal-form-box:nth-child(5) {
   margin-bottom: 20px;
 }
 .modal-form-name {
+  display: block;
+  margin-bottom: 4px;
+
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
 .modal-form-icon {
   position: absolute;
-  bottom: 10px;
-  left: 11px;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
   width: 18px;
   height: 18px;
 
@@ -786,7 +799,7 @@ img {
   display: block;
   width: 100%;
   height: 120px;
-  padding: 12px 16px 12px 16px;
+  padding: 12px 16px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   resize: none;
@@ -821,11 +834,12 @@ img {
   height: 15px;
   border-radius: 2px;
   z-index: 1;
+
   fill: var(--page-color-first);
   background-color: transparent;
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-form-checkbox {
   display: flex;
   align-items: center;
@@ -848,3 +862,4 @@ img {
   cursor: pointer;
 }
 /* ====== END Modal Form ====== */
+/* ======= END Backdrop ======= */
