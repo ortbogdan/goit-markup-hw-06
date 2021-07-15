@@ -863,5 +863,8 @@ img {
 
   cursor: pointer;
 }
+.modal-checkbox:focus + .click-on {
+  outline: 1px solid rgba(0, 0, 0);
+}
 /* ====== END Modal Form ====== */
 /* ======= END Backdrop ======= */
