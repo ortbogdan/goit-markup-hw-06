@@ -830,9 +830,11 @@ img {
 }
 .click-on {
   position: absolute;
+
   width: 16px;
   height: 15px;
   border-radius: 2px;
+
   z-index: 1;
 
   fill: var(--page-color-first);
