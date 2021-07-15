@@ -371,7 +371,15 @@
         <div class="email-box">
           <p class="bottom-title">Подпишитесь на рассылку</p>
           <form class="email-box-form" action="#" method="post">
-            <input class="email-cell" type="email" name="user-mail" placeholder="E-mail" required />
+            <label class="visually-hidden" for="subscr_mail">Подписка на сайт</label>
+            <input
+              class="email-cell"
+              id="subscr_mail"
+              type="email"
+              name="user-mail"
+              placeholder="E-mail"
+              required
+            />
             <button class="page-button" type="submit">
               Подписаться
               <svg class="send-icon">
